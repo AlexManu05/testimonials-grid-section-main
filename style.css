@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+/*font-family: 'Barlow Semi Condensed', sans-serif;*/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+--Moderate-violet: hsl(263, 55%, 52%);
+--Very-dark-grayish-blue: hsl(217, 19%, 35%);
+--Very-dark-blackish-blue: hsl(219, 29%, 14%);
+--White: hsl(0, 0%, 100%);
+--Light-gray: hsl(0, 0%, 81%);
+--Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+html {
+  font-size: 100%;
+}
+body{
+  min-height: 100vh;
+  background-color:var(--Light-grayish-blue);
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10rem;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 1.5rem;
+  grid-template-areas: 
+  "box1 box1 box2 box3"
+  "box1 box1 box2 box3"
+  "box4 box5 box5 box3";
+
+  color: var(--White);
+  max-width: 70rem;
+}
+.wrapper .box {
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.box .box-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 1rem;
+}
+.box img {
+  border-radius: 50%;
+  height: 2rem ;
+}
+.box span {
+  opacity: 50%;
+}
+.box-text h3 {
+font-size: 17px;
+margin-bottom: 1.25rem;
+}
+.box .box-quote{
+  opacity: 70%;
+}
+
+.box1 {
+  grid-area: box1;
+  background-color: var(--Moderate-violet);
+   background-image: url(/images/bg-pattern-quotation.svg) ;
+   background-position: top right 6rem;
+   background-repeat: no-repeat;
+}
+.box1 img{
+  border: 2px solid hsl(263, 55%, 70%);
+}
+
+.box2{
+  grid-area: box2;
+  background-color: var(--Very-dark-grayish-blue)
+}
+.box3{
+  grid-area: box3;
+  background-color: var(--White);
+  color: var(--Very-dark-grayish-blue);
+}
+.box4{
+  grid-area: box4;
+  background-color: var(--White);
+  color: var(--Very-dark-grayish-blue);
+}
+.box5{
+  grid-area: box5;
+  background-color: var(--Very-dark-blackish-blue);
+}
+.box5 img{
+  border: 2px solid hsl(263, 55%, 52%);
+}
+
+
+.attribution { font-size: 11px; text-align: center; padding: 1rem; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media(max-width: 991px) {
+  body{
+    padding: 4rem 1.5rem;
+  }
+ .wrapper{  grid-template-columns: minmax(300px, 1fr);
+  grid-template-areas: 
+  "box1"
+  "box2"
+  "box3"
+  "box4"
+  "box5"
+  ;}
+}
