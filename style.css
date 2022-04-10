@@ -105,9 +105,6 @@ margin-bottom: 1.25rem;
 }
 
 
-.attribution { font-size: 11px; text-align: center; padding: 1rem; }
-.attribution a { color: hsl(228, 45%, 44%); }
-
 @media(max-width: 991px) {
   body{
     padding: 4rem 1.5rem;
