@@ -63,8 +63,8 @@ body{
 .box span {
   opacity: 50%;
 }
-.box-text h3 {
-font-size: 17px;
+.box-text h2 {
+
 margin-bottom: 1.25rem;
 }
 .box .box-quote{
